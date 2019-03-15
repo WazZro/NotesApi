@@ -11,11 +11,11 @@ import { UserModule } from './user/user.module';
   imports: [
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: 'localhost',
-      port: 5432,
-      username: 'odmen',
-      password: 'odmen',
-      database: 'noteapi',
+      url: 'postgresql://odmen:odmen@postgres/noteapi',
+      // host: 'localhost',
+      // username: 'odmen',
+      // password: 'odmen',
+      // database: 'noteapi',
       entities: [__dirname + '/entities/*'],
       synchronize: true,
     }),
